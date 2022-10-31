@@ -36,7 +36,7 @@ jobs:
       
 
       # Runs a single command using the runners shell
-      - if: github.ref == 'main' && ((github.event_name == workflow_dispatch && github.event.inputs.myinput ) || (github.event_name == push && ${{ env.DO_PUBLISH }} ))
+      - if: ${{ github.ref }}  == 'main' && ((${{github.event_name }} == 'workflow_dispatch' && ${{ github.event.inputs.myinput }} ) || (${{ github.event_name }} == 'push' && ${{ env.DO_PUBLISH }} ))
         name: Run a one-line script
         # if: github.event.inputs.myinput
         run: echo Hello, world!
