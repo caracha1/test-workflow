@@ -45,7 +45,7 @@ jobs:
           echo ${{ env.DO_PUBLISH }}
       
       # Runs a single command using the runners shell
-      - if: env.DO_PUBLISH == true
+      - if: ${{  env.DO_PUBLISH == true }}
         name: Run a one-line script
         run: echo Hello, world!
 
