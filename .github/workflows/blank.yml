@@ -61,5 +61,5 @@ jobs:
         if: github.ref == 'refs/heads/main' || github.event.inputs.force_release == 'true'
         run: |
           echo "test" > test.txt
-          gh release create -p v1.2.3 --generate-notes --target ${{ github.ref }} 'test.txt#My display label'
+          gh release create -p v0.2.3 --generate-notes --target ${{ github.ref }} 'test.txt#My display label'
 
