@@ -18,6 +18,11 @@ on:
         description: 'my input'
         required: true
         default: true
+      force_release:
+        description: "Release Artifact"
+        required: false
+        default: false
+        type: boolean
         
 env:
   DO_PUBLISH: ${{ github.ref == 'refs/heads/main' && ( (github.event_name == 'workflow_dispatch' && github.event.inputs.myinput == 'true' ) || github.event_name == 'push' ) }}
