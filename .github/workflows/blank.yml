@@ -49,4 +49,10 @@ jobs:
         name: Run a one-line script
         run: echo Hello, world!
 
+      - name: Release
+        id: create_release
+        if: github.ref == 'refs/heads/main' || github.event.inputs.force_release == 'true'
+        run: |
+          echo "test" > test.txt
+          gh release create -p v1.2.3 --target ${{ github.ref }} 'test.txt#My display label'
 
