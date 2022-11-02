@@ -55,6 +55,8 @@ jobs:
         run: echo Hello, world!
 
       - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         id: create_release
         if: github.ref == 'refs/heads/main' || github.event.inputs.force_release == 'true'
         run: |
