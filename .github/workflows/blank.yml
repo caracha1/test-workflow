@@ -41,10 +41,10 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: install gitversion
-	uses: gittools/actions/gitversion/setup@v0.9.7
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.7
         with:
-          versionSpec: '5.x'
+          versionSpec: '5.5.0'
         
       - name: Determine Version
         uses: gittools/actions/gitversion/execute@v0.9.7
