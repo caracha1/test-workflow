@@ -29,6 +29,7 @@ jobs:
         env:
           workflow_name: ${{ join(github.workflow, ' ') }}
         run: |
-          echo $WORKFLOW_NAME
+          echo $workflow_name
+          echo hello
           
 
