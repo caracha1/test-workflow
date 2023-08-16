@@ -25,6 +25,8 @@ jobs:
     # ${{ fromJSON(matrix.agent) }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Type ${{ matrix.type }}
         run: echo Hello, world ${{ matrix.type }}!
       - if: ${{ matrix.type == 'Type1' }}
