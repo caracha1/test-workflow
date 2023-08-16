@@ -9,4 +9,4 @@ runs:
   using: 'composite'
   steps:
     - name: test temp1
-      run: echo "test"
+      run: echo "${{ inputs.drop }}"
