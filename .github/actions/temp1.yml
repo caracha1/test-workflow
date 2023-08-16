@@ -1,0 +1,12 @@
+name: temp1
+
+inputs:
+  drop: 
+    required: true
+    description: "drop folder"
+
+runs:
+  using: 'composite'
+  steps:
+    - name: test temp1
+      run: echo "test"
