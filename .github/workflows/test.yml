@@ -28,11 +28,11 @@ jobs:
         run: echo Hello, world ${{ matrix.drop }}!
       - if: ${{ matrix.type == 'Type1' }}
         name: Run ${{ matrix.type }}
-        uses: ./temp1.yml
+        uses: ./.github/actions/temp1
         with:
           drop: ${{ matrix.drop }}
       - if: ${{ matrix.type == 'Type2' }}
         name: Run ${{ matrix.type }}
-        uses: ./temp2.yml
+        uses: ./.github/actions/temp2
         with:
           drop: ${{ matrix.drop }}
