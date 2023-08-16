@@ -16,12 +16,13 @@ jobs:
           - type: Type1
             drop: drop1
             type1: 0
-            agent: '["linux-latest"]'
+            agent: '["windows-latest"]'
           - type: Type2
             drop: drop2
             agent: '["linux-latest"]'
     name: ${{ matrix.type }}
-    runs-on: ${{ fromJSON(matrix.agent) }}
+    runs-on: linux-latest 
+    # ${{ fromJSON(matrix.agent) }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Drop ${{ matrix.drop }}
