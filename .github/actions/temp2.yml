@@ -1,0 +1,12 @@
+name: temp2
+
+inputs:
+  drop: 
+    required: true
+    description: "drop folder"
+
+runs:
+  using: 'composite'
+  steps:
+    - name: test temp2
+      run: echo "${{ inputs.drop }}"
